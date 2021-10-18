@@ -429,41 +429,24 @@
           "time": "2019-07-01T23:21:34+00:00"
       },
       {
-          "name": "humanmade/s3-uploads",
-          "version": "2.1.0",
-          "source": {
-              "type": "git",
-              "url": "https://github.com/humanmade/S3-Uploads.git",
-              "reference": "f17559cba87e0a0a0191a747f62c74dbde60208d"
-          },
-          "dist": {
-              "type": "zip",
-              "url": "https://api.github.com/repos/humanmade/S3-Uploads/zipball/f17559cba87e0a0a0191a747f62c74dbde60208d",
-              "reference": "f17559cba87e0a0a0191a747f62c74dbde60208d",
-              "shasum": ""
-          },
-          "require": {
-              "aws/aws-sdk-php": "~3.18",
-              "composer/installers": "~1.0"
-          },
-          "type": "wordpress-plugin",
-          "notification-url": "https://packagist.org/downloads/",
-          "license": [
-              "GPL-2.0+"
-          ],
-          "authors": [
-              {
-                  "name": "Human Made Limited",
-                  "email": "support@humanmade.co.uk",
-                  "homepage": "http://hmn.md/"
-              }
-          ],
-          "description": "WordPress plugin to store uploads on S3",
-          "homepage": "https://github.com/humanmade/S3-Uploads",
-          "keywords": [
-              "wordpress"
-          ],
-          "time": "2019-04-16T05:09:44+00:00"
+        "name": "wpackagist-plugin/wordfence",
+        "version": "6.3.22",
+        "source": {
+            "type": "svn",
+            "url": "https://plugins.svn.wordpress.org/wordfence/",
+            "reference": "tags/6.3.22"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://downloads.wordpress.org/plugin/wordfence.6.3.22.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-plugin",
+        "homepage": "https://wordpress.org/plugins/wordfence/"
       },
       {
           "name": "mtdowling/jmespath.php",
@@ -974,26 +957,6 @@
               "wordpress"
           ],
           "time": "2019-08-13T23:12:27+00:00"
-      },
-      {
-          "name": "wpackagist-plugin/jetpack",
-          "version": "7.7.2",
-          "source": {
-              "type": "svn",
-              "url": "https://plugins.svn.wordpress.org/jetpack/",
-              "reference": "tags/7.7.2"
-          },
-          "dist": {
-              "type": "zip",
-              "url": "https://downloads.wordpress.org/plugin/jetpack.7.7.2.zip",
-              "reference": null,
-              "shasum": null
-          },
-          "require": {
-              "composer/installers": "~1.0"
-          },
-          "type": "wordpress-plugin",
-          "homepage": "https://wordpress.org/plugins/jetpack/"
       },
       {
           "name": "wpackagist-plugin/redis-cache",
