@@ -1,16 +1,8 @@
 {
-    "name": "xyu/heroku-wp",
+    "name": "luisgagocasas/heroku-wordpress-bedrock",
     "description": "A template for installing and running WordPress on Heroku",
-    "homepage": "https://github.com/xyu/heroku-wp",
+    "homepage": "https://github.com/luisgagocasas/heroku-wordpress-bedrock",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Xiao Yu",
-            "email": "me@xyu.io",
-            "homepage": "http://xyu.io",
-            "role": "Developer"
-        }
-    ],
     "require": {
         "ext-gd": "*",
         "php": "7.*",
@@ -21,10 +13,8 @@
         "wpackagist-plugin/redis-cache": "~1",
         "wpackagist-plugin/secure-db-connection": "~1",
 
-        "humanmade/s3-uploads": "~2",
-        "wpackagist-plugin/jetpack": "*",
+        "wpackagist-plugin/wordfence": "~1",
         "wpackagist-plugin/sendgrid-email-delivery-simplified": "~1",
-        "sendgrid-email-delivery-simplified": "1.11.7",
 
         "predis/predis": "~1",
         "wp-cli/wp-cli": "^2"
@@ -64,6 +54,7 @@
                 "automattic/batcache",
                 "wpackagist-plugin/redis-cache",
                 "wpackagist-plugin/secure-db-connection",
+                "wpackagist-plugin/wordfence",
                 "wpackagist-plugin/sendgrid-email-delivery-simplified"
             ],
             "vendor/wordpress/wordpress-ext/wp-content/plugins/{$name}/": [
