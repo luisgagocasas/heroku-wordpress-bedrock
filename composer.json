@@ -14,7 +14,7 @@
         "wpackagist-plugin/secure-db-connection": "~1",
 
         "wpackagist-plugin/wordfence": "6.3.22",
-        "wpackagist-plugin/sendgrid-email-delivery-simplified": "1.11.7",
+        "wpackagist-plugin/sendgrid-email-delivery-simplified": "1.11.8",
 
         "predis/predis": "~1",
         "wp-cli/wp-cli": "^2"
