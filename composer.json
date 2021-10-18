@@ -13,7 +13,7 @@
         "wpackagist-plugin/redis-cache": "~1",
         "wpackagist-plugin/secure-db-connection": "~1",
 
-        "wpackagist-plugin/wordfence": "~1",
+        "wpackagist-plugin/wordfence": "6.3.22",
         "wpackagist-plugin/sendgrid-email-delivery-simplified": "1.11.7",
 
         "predis/predis": "~1",
