@@ -18,13 +18,15 @@
 require '/app/vendor/autoload.php';
 
 // Disable filesystem level changes from WP
-define( 'DISALLOW_FILE_EDIT', false );
+define( 'DISALLOW_FILE_EDIT', true );
 define( 'DISALLOW_FILE_MODS', false );
 
 // Make sure we admin over SSL
 define( 'FORCE_SSL_LOGIN', true );
 define( 'FORCE_SSL_ADMIN', true );
 
+// HTTPS port is always 80 because SSL is terminated at Heroku router / CloudFlare
+// define( 'JETPACK_SIGNATURE__HTTPS_PORT', 80 );
 
 /**
  * Redis settings.
@@ -57,25 +59,10 @@ if ( isset( $_ENV['WP_DB_SSL'] ) && 'ON' == $_ENV['WP_DB_SSL'] ) {
 	$_dbflags |= MYSQLI_CLIENT_SSL;
 }
 
-if ( isset( $_ENV['WP_DB_URL'] ) ) {
-	$_dbsettings = parse_url( $_ENV['WP_DB_URL'] );
+$_dbsettings = parse_url( $_ENV['WP_DB_URL'] );
 
-	// Use RDS CA for Jaws DB / most default installs
-	if ( empty( $_ENV[ 'MYSQL_SSL_CA' ] ) ) {
-		$_ENV[ 'MYSQL_SSL_CA' ] = 'rds-combined-ca-bundle.pem';
-	}
-} elseif ( isset( $_ENV['CLEARDB_DATABASE_URL'] ) ) {
-	$_dbsettings = parse_url( $_ENV['CLEARDB_DATABASE_URL'] );
-
-	// Use ClearDB CA for Clear DB
-	if ( empty( $_ENV[ 'MYSQL_SSL_CA' ] ) ) {
-		$_ENV[ 'MYSQL_SSL_CA' ] = 'cleardb-ca.pem';
-	}
-	// ClearDB signs with an invalid CN
-	$_dbflags |= MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT;
-} else {
-	$_dbsettings = parse_url( 'mysql://herokuwp:password@127.0.0.1/herokuwp' );
-}
+// Use RDS CA for Jaws DB / most default installs	
+$_ENV[ 'MYSQL_SSL_CA' ] = 'rds-combined-ca-bundle.pem';
 
 define( 'DB_NAME',              trim( $_dbsettings['path'], '/' ) );
 define( 'DB_USER',              $_dbsettings['user']              );
@@ -174,7 +161,7 @@ $table_prefix  = 'wp_';
  * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
  * language support.
  */
-define( 'WPLANG', '' );
+define( 'WPLANG', 'es_ES' );
 
 /**
  * For developers: WordPress debugging mode.

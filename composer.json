@@ -5,7 +5,7 @@
     "license": "MIT",
     "require": {
         "ext-gd": "*",
-        "php": "7.*",
+        "php": "7.3",
 
         "wordpress/wordpress": "*",
 
@@ -14,7 +14,7 @@
         "wpackagist-plugin/secure-db-connection": "~1",
 
         "wpackagist-plugin/wordfence": "6.3.22",
-        "wpackagist-plugin/sendgrid-email-delivery-simplified": "1.11.8",
+        "wpackagist-plugin/connect-sendgrid-for-emails":"1.11.9",
 
         "predis/predis": "~1",
         "wp-cli/wp-cli": "^2"
@@ -55,7 +55,7 @@
                 "wpackagist-plugin/redis-cache",
                 "wpackagist-plugin/secure-db-connection",
                 "wpackagist-plugin/wordfence",
-                "wpackagist-plugin/sendgrid-email-delivery-simplified"
+                "wpackagist-plugin/connect-sendgrid-for-emails"
             ],
             "vendor/wordpress/wordpress-ext/wp-content/plugins/{$name}/": [
                 "type:wordpress-plugin"
