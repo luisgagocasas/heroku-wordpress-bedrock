@@ -12,9 +12,8 @@
         "automattic/batcache": "dev-master",
         "wpackagist-plugin/redis-cache": "~1",
         "wpackagist-plugin/secure-db-connection": "~1",
-
-        "wpackagist-plugin/wordfence": "6.3.22",
-        "wpackagist-plugin/connect-sendgrid-for-emails":"1.11.9",
+        "wpackagist-plugin/wordfence":"7.5.6",
+        "sendgrid/wordpress":"1.11.7",
 
         "predis/predis": "~1",
         "wp-cli/wp-cli": "^2"
@@ -40,6 +39,10 @@
             "url": "https://github.com/xyu/batcache"
         },
         {
+            "type": "git",
+            "url": "https://github.com/sendgrid/wordpress"
+        },
+        {
             "type": "composer",
             "url": "https://wpackagist.org"
         },
@@ -55,7 +58,7 @@
                 "wpackagist-plugin/redis-cache",
                 "wpackagist-plugin/secure-db-connection",
                 "wpackagist-plugin/wordfence",
-                "wpackagist-plugin/connect-sendgrid-for-emails"
+                "sendgrid/wordpress"
             ],
             "vendor/wordpress/wordpress-ext/wp-content/plugins/{$name}/": [
                 "type:wordpress-plugin"
