@@ -35,12 +35,19 @@
             }
         },
         {
-            "type": "vcs",
-            "url": "https://github.com/xyu/batcache"
+            "type": "package",
+            "package": {
+                "name": "sendgrid/wordpress",
+                "version": "1.11.7",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/sendgrid/wordpress/archive/refs/heads/master.zip"
+                }
+            }
         },
         {
-            "type": "git",
-            "url": "https://github.com/sendgrid/wordpress"
+            "type": "vcs",
+            "url": "https://github.com/xyu/batcache"
         },
         {
             "type": "composer",
